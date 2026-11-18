@@ -1,0 +1,20 @@
+{
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/library",
+        "${workspaceFolder}/ac-library"
+    ],
+    "C_Cpp.default.cppStandard": "c++23",
+    "C_Cpp.default.defines": ["LOCAL"],
+    "C_Cpp.default.compilerPath": "/usr/bin/g++",
+    "C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
+    "files.associations": {
+        "*.hpp": "cpp"
+    },
+    "files.autoSave": "onFocusChange",
+    "[cpp]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false
+    },
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 2, ColumnLimit: 0 }"
+}

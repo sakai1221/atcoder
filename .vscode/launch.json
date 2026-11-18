@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C++: debug active file (gdb)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/main",
+            "args": ["<", "${fileDirname}/test/sample-1.in"],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "preLaunchTask": "C++: build active file"
+        }
+    ]
+}

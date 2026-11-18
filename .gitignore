@@ -1,0 +1,38 @@
+# build artifacts
+*.o
+*.out
+*.exe
+contest/**/main
+contest/**/a.out
+
+# downloaded sample test cases (fetched via oj, not ours to redistribute)
+contest/**/test/
+
+# r が保存するランダムテストの反例
+contest/**/random/
+
+# python / tooling caches
+__pycache__/
+*.pyc
+.cache/
+.oj/
+
+# VSCode 拡張 atcoder-helper への依頼ファイル (aliases.sh が書く)
+.vscode/.open-request
+
+# 公開リポジトリに含めないもの
+# ac-library: 公式 ACL (別リポジトリ)
+# contest: 解答と問題文 (問題文は AtCoder の著作物。コンテスト中に解答が公開されるのも防ぐ)
+# .claude: Claude Code のローカル設定
+ac-library/
+contest/
+.claude/
+
+# ログイン Cookie (import_cookies.py に渡すもの)。絶対に公開しない
+*cookie*.txt
+*cookies*
+cookie.jar
+!import_cookies.py
+
+# 手元用のメモ・使い方 (公開しない)
+docs/

@@ -1,0 +1,52 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C++: build active file",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++23",
+                "-O2",
+                "-Wall",
+                "-Wextra",
+                "-DLOCAL",
+                "-D_GLIBCXX_DEBUG",
+                "-g",
+                "-I", "${workspaceFolder}/library",
+                "-I", "${workspaceFolder}/ac-library",
+                "${file}",
+                "-o", "${fileDirname}/main"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "clear": true
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "oj: test sample cases",
+            "type": "shell",
+            "command": "oj",
+            "args": ["test", "-c", "${fileDirname}/main", "-d", "${fileDirname}/test"],
+            "dependsOn": "C++: build active file",
+            "presentation": {
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "submit: copy & open browser",
+            "type": "shell",
+            "command": "bash",
+            "args": ["-c", "source '${workspaceFolder}/aliases.sh' && cd '${fileDirname}' && s"],
+            "presentation": {
+                "clear": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}

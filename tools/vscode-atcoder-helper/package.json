@@ -1,0 +1,18 @@
+{
+  "name": "atcoder-helper",
+  "displayName": "AtCoder Helper",
+  "description": "new / go / stl から頼まれたファイルを、左に main.cpp・右に Markdown プレビューの配置で開く",
+  "publisher": "sakai",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "extensionKind": [
+    "workspace"
+  ],
+  "contributes": {}
+}
